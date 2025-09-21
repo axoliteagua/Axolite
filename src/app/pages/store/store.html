@@ -1,0 +1,36 @@
+<section class="store-hero">
+  <div class="container">
+    <h1>Nuestra Tienda</h1>
+    <p class="subtitle">Encuentra el purificador perfecto para ti</p>
+  </div>
+</section>
+
+<section class="store-content">
+  <div class="container">
+    <div class="products-grid">
+      @for(product of products$ | async; track product.id) {
+        <div class="product-card">
+          <img [src]="product.imageUrl" [alt]="product.name" class="product-image">
+          <div class="product-info">
+            <h3>{{ product.name }}</h3>
+            <p class="product-description">{{ product.description }}</p>
+            <div class="product-features">
+              <h4>Características:</h4>
+              <ul>
+                @for(feature of product.features; track feature) {
+                  <li>{{ feature }}</li>
+                }
+              </ul>
+            </div>
+            <div class="product-price">
+              <span>$ {{ product.price }}</span>
+              <button class="btn btn-primary" (click)="contactWhatsApp(product)">
+                Comprar por WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

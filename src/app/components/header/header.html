@@ -1,0 +1,22 @@
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="/" class="logo">
+  <img src="assets/images/logo.png" alt="Axolite Logo" class="logo-img" />
+        
+      </a>
+      <ul class="nav-list">
+        @for(item of navItems; track item.path) {
+          <li class="nav-item">
+            <a [routerLink]="item.path" 
+               routerLinkActive="active" 
+               [routerLinkActiveOptions]="{ exact: item.path === '/' }"
+               class="nav-link">
+              {{ item.label }}
+            </a>
+          </li>
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

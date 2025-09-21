@@ -1,0 +1,133 @@
+@import '../../../styles/variables';
+
+.contact-hero {
+  background: linear-gradient(rgba($secondary, 0.9), rgba($secondary, 0.9)),
+              url('/assets/images/contact-hero.jpg') center/cover;
+  padding: $spacing-xl 0;
+  color: $white;
+  text-align: center;
+  margin-bottom: $spacing-xl;
+
+  h1 {
+    margin-bottom: $spacing-sm;
+  }
+
+  .subtitle {
+    font-size: $font-size-lg;
+    opacity: 0.9;
+  }
+}
+
+.contact-content {
+  padding: $spacing-xl 0;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-xl * 2;
+}
+
+.contact-info {
+  h2 {
+    color: $secondary;
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: $spacing-md;
+
+  .icon {
+    font-size: $font-size-xl;
+    color: $primary;
+  }
+
+  .info-text {
+    h3 {
+      color: $secondary;
+      margin-bottom: $spacing-xs;
+    }
+
+    p {
+      color: rgba($secondary, 0.8);
+      margin-bottom: $spacing-xs;
+    }
+  }
+}
+
+.contact-form {
+  background: $white;
+  padding: $spacing-xl;
+  border-radius: $border-radius-lg;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    color: $secondary;
+    margin-bottom: $spacing-xl;
+  }
+}
+
+.form-group {
+  margin-bottom: $spacing-md;
+
+  label {
+    display: block;
+    margin-bottom: $spacing-xs;
+    color: $secondary;
+    font-weight: 500;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: $spacing-sm;
+    border: 1px solid rgba($secondary, 0.2);
+    border-radius: $border-radius;
+    font-size: $font-size-base;
+    transition: $transition-base;
+
+    &:focus {
+      outline: none;
+      border-color: $primary;
+      box-shadow: 0 0 0 2px rgba($primary, 0.1);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+button[type="submit"] {
+  width: 100%;
+  margin-top: $spacing-lg;
+  
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+// Responsive design
+@media (max-width: $breakpoint-md) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .info-item {
+    justify-content: center;
+  }
+}

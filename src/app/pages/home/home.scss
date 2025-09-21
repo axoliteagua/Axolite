@@ -1,0 +1,170 @@
+@import '../../../styles/variables';
+
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, $primary 60%, $secondary 100%);
+  color: $white;
+  text-align: center;
+  padding: 100px 0 140px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba($primary, 0.12);
+  animation: heroFadeIn 1.2s ease;
+
+  .hero-logo {
+    width: 30%;
+    margin-bottom: 24px;
+    filter: drop-shadow(0 4px 16px rgba($secondary, 0.18));
+    animation: logoFloat 3s ease-in-out infinite;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 16px rgba($secondary, 0.18);
+    animation: textPop 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 28px;
+    opacity: 0.95;
+    animation: fadeInUp 1.4s 0.2s both;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 14px 32px;
+    background: $white;
+    color: $primary;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba($primary, 0.10);
+    transition: all 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+    animation: btnPop 1.2s 0.3s both;
+    &:hover {
+      background: $primary;
+      color: $white;
+      box-shadow: 0 4px 16px rgba($primary, 0.18);
+      transform: scale(1.05);
+    }
+  }
+
+  .hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: url('https://svgshare.com/i/11t_.svg') repeat-x;
+    background-size: cover;
+    opacity: 0.9;
+    filter: drop-shadow(0 -4px 16px rgba($primary, 0.12));
+  }
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(-40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes logoFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px) scale(1.05); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes textPop {
+  0% { transform: scale(0.7); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes btnPop {
+  0% { transform: scale(0.7); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); }
+}
+  
+
+  h2 {
+    text-align: center;
+    color: $primary;
+    margin-bottom: $spacing-lg;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba($primary, 0.10);
+    animation: textPop 1.2s cubic-bezier(.68,-0.55,.27,1.55);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-lg;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .feature-card {
+    background: linear-gradient(120deg, $white 80%, rgba($primary, 0.08));
+    border-radius: $border-radius-lg;
+    padding: $spacing-lg;
+    box-shadow: 0 4px 18px rgba($primary, 0.08);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1.2s both;
+
+    &:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 8px 32px rgba($primary, 0.18);
+      background: linear-gradient(120deg, $primary 10%, $white 90%);
+      color: $white;
+    }
+
+    .feature-icon {
+      font-size: 2.6rem;
+      margin-bottom: $spacing-md;
+      color: $primary;
+      transition: color 0.3s;
+    }
+    h3 {
+      color: $secondary;
+      margin-bottom: $spacing-sm;
+      font-weight: 700;
+      font-size: 1.3rem;
+    }
+    p {
+      color: rgba($secondary, 0.8);
+      font-size: $font-size-md;
+      line-height: 1.6;
+    }
+  }
+    
+
+    .feature-icon { font-size: 2.2rem; margin-bottom: $spacing-md; }
+    h3 { color: $primary; margin-bottom: $spacing-sm; }
+    p { color: rgba($secondary, 0.8); font-size: $font-size-md; }
+
+
+/* Responsive */
+@media (max-width: $breakpoint-lg) {
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: $breakpoint-md) {
+  .container { padding: 0 0.75rem; }
+  .features-grid { grid-template-columns: 1fr; }
+  .banner-content { padding: $spacing-md; max-width: 92%; }
+  .banner-bienvenida { padding-top: 90px; } // reduce espacio en móvil
+}
