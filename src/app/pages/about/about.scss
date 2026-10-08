@@ -1,119 +1,28 @@
 @import '../../../styles/variables';
 
-.about-hero {
-  background: linear-gradient(rgba($secondary, 0.9), rgba($secondary, 0.9)),
-              url('/assets/images/about-hero.jpg') center/cover;
-  padding: $spacing-xl * 1.5 0;
-  color: $white;
-  text-align: center;
-  margin-bottom: $spacing-xl;
-
-  h1 {
-    margin-bottom: $spacing-sm;
-  }
-
-  .subtitle {
-    font-size: $font-size-lg;
-    opacity: 0.9;
-  }
-}
-
-.about-content {
-  padding: $spacing-xl 0;
-}
-
-.mission-vision {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: $spacing-xl;
-  margin-bottom: $spacing-xl * 2;
-
-  h2 {
-    color: $primary;
-    margin-bottom: $spacing-md;
-  }
-
-  p {
-    line-height: 1.8;
-  }
-}
-
-.values {
-  margin-bottom: $spacing-xl * 2;
-  
-  h2 {
-    text-align: center;
-    margin-bottom: $spacing-xl;
-  }
-}
-
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: $spacing-lg;
-}
-
-.value-card {
-  background: $white;
-  padding: $spacing-lg;
-  border-radius: $border-radius-lg;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-
-  h3 {
-    color: $secondary;
-    margin-bottom: $spacing-md;
-  }
-
-  p {
-    color: rgba($secondary, 0.8);
-  }
-}
-
-.commitment {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-
-  h2 {
-    margin-bottom: $spacing-lg;
-  }
-
-  p {
-    margin-bottom: $spacing-xl;
-    line-height: 1.8;
-  }
-}
-
-.commitment-points {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: $spacing-md;
-  text-align: left;
-}
-
-.point {
-  display: flex;
-  align-items: center;
-  gap: $spacing-sm;
-
-  i {
-    color: $primary;
-    font-size: $font-size-lg;
-  }
-}
-
-// Responsive design
-@media (max-width: $breakpoint-md) {
-  .mission-vision {
-    grid-template-columns: 1fr;
-  }
-
-  .values-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .commitment-points {
-    grid-template-columns: 1fr;
-  }
-}
+.about-page { padding-top: 78px; }
+.page-hero { padding: $space-7 0 $space-6; }
+.page-hero h1 { max-width: 800px; }
+.page-hero h1 span { color: $blue; }
+.page-hero > p:last-child { max-width: 520px; color: $muted; font-size: 1.2rem; }
+.story { display: grid; grid-template-columns: 0.9fr 1fr; gap: $space-7; align-items: start; padding: $space-6 0 $space-7; }
+.story-lead h2 { max-width: 530px; }
+.story-copy { max-width: 560px; color: $muted; font-size: 1.05rem; }
+.mission-section { padding: $space-7 0; background: $white; }
+.mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: $space-3; }
+.mission-card { min-height: 350px; display: flex; flex-direction: column; justify-content: flex-end; border-radius: $radius-lg; padding: $space-6; background: rgba($cyan, 0.15); }
+.mission-card h2 { max-width: 490px; font-size: clamp(1.7rem, 3vw, 2.6rem); }
+.mission-card p:last-child { max-width: 440px; margin: 0; color: $muted; }
+.mission-card-dark { background: $ink; color: $white; }
+.mission-card-dark p:last-child { color: rgba($white, 0.7); }
+.mission-card-dark .section-kicker { color: $cyan; }
+.values-section { padding: $space-7 0; }
+.values-section .section-heading { margin-bottom: $space-6; }
+.values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: $space-3; }
+.values-grid article { border-top: 2px solid $cyan; padding-top: $space-3; }
+.values-grid span { color: $blue; font-family: $font-display; font-size: 0.82rem; font-weight: 700; }
+.values-grid h3 { margin-top: $space-5; }
+.values-grid p { color: $muted; }
+.about-end { display: flex; align-items: end; justify-content: space-between; gap: $space-4; margin-top: $space-3; padding: $space-6; border-radius: $radius-lg; background: linear-gradient(110deg, rgba($cyan, 0.18), rgba($pink, 0.12)); }
+.about-end h2 { margin: 0; }
+@media (max-width: $breakpoint-md) { .about-page { padding-top: 70px; } .page-hero { padding: $space-6 0 $space-5; } .story, .mission-grid { grid-template-columns: 1fr; gap: $space-4; } .mission-card { min-height: 300px; padding: $space-5; } .values-section { padding: $space-6 0; } .values-grid { grid-template-columns: 1fr 1fr; row-gap: $space-5; } .about-end { align-items: flex-start; flex-direction: column; } }

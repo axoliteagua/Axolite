@@ -1,44 +1,34 @@
 import { Injectable } from '@angular/core';
-import { Product } from '../models/product.model';
 import { Observable, of } from 'rxjs';
+import { Product } from '../models/product.model';
 
-@Injectable({
-  providedIn: 'root'
-})
+// Static catalog: add or edit products here and place images in src/assets/images/products/.
+@Injectable({ providedIn: 'root' })
 export class ProductService {
-  private products: Product[] = [
+  private readonly whatsappNumber = '527208620864';
+
+  private readonly products: Product[] = [
     {
       id: 1,
-      name: "Filtro de Agua Premium",
-      description: "Sistema de filtración avanzado con tecnología de ósmosis inversa para agua pura y cristalina.",
-      price: 299.99,
-      imageUrl: "assets/images/filter-premium.jpg",
-      features: [
-        "Ósmosis inversa de 5 etapas",
-        "Elimina el 99.9% de contaminantes",
-        "Fácil instalación",
-        "Mantenimiento simple"
-      ],
-      specifications: {
-        "Capacidad": "50 galones por día",
-        "Dimensiones": "15x15x45 cm",
-        "Vida útil": "12 meses",
-        "Certificaciones": "NSF/ANSI 58"
-      }
+      name: 'Purificador Axolite Casa',
+      description: 'Una solución clara y confiable para disfrutar agua pura todos los días.',
+      imageUrl: 'assets/images/products/purificador-casa.jpg',
+      features: ['Filtración de varias etapas', 'Instalación sencilla', 'Mantenimiento práctico']
     },
-    // Add more products as needed
+    {
+      id: 2,
+      name: 'Purificador Axolite Negocio',
+      description: 'Diseñado para espacios que necesitan una solución constante y de alto rendimiento.',
+      imageUrl: 'assets/images/products/purificador-negocio.jpg',
+      features: ['Mayor capacidad de servicio', 'Asesoría para instalación', 'Atención por WhatsApp']
+    }
   ];
 
-  getProducts(): Observable<Product[]> {
-    return of(this.products);
-  }
-
-  getProduct(id: number): Observable<Product | undefined> {
-    return of(this.products.find(product => product.id === id));
-  }
+  getProducts(): Observable<Product[]> { return of(this.products); }
+  getProduct(id: number): Observable<Product | undefined> { return of(this.products.find(product => product.id === id)); }
 
   getWhatsAppLink(product: Product): string {
-    const message = `Hola, estoy interesado en el producto ${product.name} (ID: ${product.id}) con precio $${product.price}`;
-    return `https://wa.me/YOUR_PHONE_NUMBER?text=${encodeURIComponent(message)}`;
+    const message = `Hola, me interesa ${product.name}. ¿Podrían compartir disponibilidad y detalles?`;
+    return `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(message)}`;
   }
 }

@@ -1,27 +1,21 @@
 <footer class="footer">
-  <div class="container">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Axolite</h3>
-        <p>Purificadores de agua de alta calidad para tu hogar y negocio.</p>
-      </div>
-      <div class="footer-section">
-        <h4>Enlaces rápidos</h4>
-        <ul>
-          <li><a routerLink="/">Inicio</a></li>
-          <li><a routerLink="/about">Nosotros</a></li>
-          <li><a routerLink="/store">Tienda</a></li>
-          <li><a routerLink="/contact">Contacto</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h4>Contacto</h4>
-        <p>Email: info@axolite.com</p>
-        <p>WhatsApp: +1234567890</p>
-      </div>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="assets/images/logoWhite.png" alt="Axolite" class="footer-logo" />
+      <p>Agua purificada para los momentos que compartimos.</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; {{ currentYear }} Axolite. Todos los derechos reservados.</p>
+    <div>
+      <p class="footer-label">Explora</p>
+      <a routerLink="/">Inicio</a>
+      <a routerLink="/about">Nuestra esencia</a>
+      <a routerLink="/store">Catálogo</a>
+    </div>
+    <div>
+      <p class="footer-label">Hablemos</p>
+      <a href="https://wa.me/527208620864" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:info@axolite.com">info@axolite.com</a>
+      <a routerLink="/contact">Contacto</a>
     </div>
   </div>
+  <div class="container footer-bottom"><span>© {{ currentYear }} Axolite</span><span>El agua que une familias.</span></div>
 </footer>

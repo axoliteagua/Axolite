@@ -1,36 +1,15 @@
-<section class="store-hero">
-  <div class="container">
-    <h1>Nuestra Tienda</h1>
-    <p class="subtitle">Encuentra el purificador perfecto para ti</p>
-  </div>
-</section>
-
-<section class="store-content">
-  <div class="container">
+<main class="store-page">
+  <section class="store-hero container"><p class="section-kicker">Catálogo Axolite</p><h1>Elige tu próxima fuente de bienestar.</h1><p>Explora nuestras soluciones. Cuando encuentres la indicada, escríbenos directamente por WhatsApp.</p></section>
+  <section class="catalogue container" aria-labelledby="catalogue-title">
+    <div class="catalogue-head"><div><p class="section-kicker">Productos</p><h2 id="catalogue-title">Pensados para tu espacio.</h2></div><p class="catalogue-note">Catálogo actualizado de forma estática desde GitHub. Las existencias, precios y detalles se confirman por WhatsApp.</p></div>
     <div class="products-grid">
-      @for(product of products$ | async; track product.id) {
-        <div class="product-card">
-          <img [src]="product.imageUrl" [alt]="product.name" class="product-image">
-          <div class="product-info">
-            <h3>{{ product.name }}</h3>
-            <p class="product-description">{{ product.description }}</p>
-            <div class="product-features">
-              <h4>Características:</h4>
-              <ul>
-                @for(feature of product.features; track feature) {
-                  <li>{{ feature }}</li>
-                }
-              </ul>
-            </div>
-            <div class="product-price">
-              <span>$ {{ product.price }}</span>
-              <button class="btn btn-primary" (click)="contactWhatsApp(product)">
-                Comprar por WhatsApp
-              </button>
-            </div>
-          </div>
-        </div>
+      @for (product of products$ | async; track product.id) {
+        <article class="product-card">
+          <div class="product-art"><span class="product-water" aria-hidden="true"></span>@if (product.imageUrl) {<img [src]="product.imageUrl" [alt]="product.name" class="product-image" (error)="hideImage($event)" />}</div>
+          <div class="product-info"><p class="product-index">Producto {{ product.id | number:'2.0-0' }}</p><h3>{{ product.name }}</h3><p class="product-description">{{ product.description }}</p><ul class="product-features">@for (feature of product.features; track feature) {<li>{{ feature }}</li>}</ul><a class="btn btn-whatsapp" [href]="getWhatsAppLink(product)" target="_blank" rel="noopener">Consultar por WhatsApp <span aria-hidden="true">↗</span></a></div>
+        </article>
       }
     </div>
-  </div>
-</section>
+    <div class="catalogue-edit"><strong>¿Quieres agregar un producto?</strong><span>Edita la lista en <code>src/app/services/product.service.ts</code> y guarda sus imágenes en <code>src/assets/images/products/</code>.</span></div>
+  </section>
+</main>

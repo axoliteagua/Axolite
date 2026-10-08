@@ -1,44 +1,40 @@
-<section class="hero">
-  <div class="hero-content">
-  <img src="assets/images/logoWhite.png" alt="Axolite Banner Logo" class="hero-logo" />
-    <h1>¡Bienvenido a Axolite!</h1>
-    <p>Tu fuente de agua pura y bienestar.<br>Descubre la diferencia desde el primer sorbo.</p>
-    <a href="#productos" class="btn-primary">Ver Productos</a>
-  </div>
-  <div class="hero-wave"></div>
-</section>
-
-
-
-<section class="features">
-  <div class="container">
-     
-    
- <h2 class="text-center">¿Por qué elegir Axolite?</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <i class="feature-icon">🌊</i>
-        <h3>Tecnología Avanzada</h3>
-        <p>Sistemas de filtración de última generación para la mejor calidad de agua.</p>
+<main>
+  <section class="hero container" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="section-kicker">Agua que conecta</p>
+      <h1 id="hero-title">El agua que <span>une familias.</span></h1>
+      <p class="hero-lede">Pureza, frescura y confianza para acompañar los momentos que hacen hogar.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" routerLink="/store">Explorar catálogo <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-secondary" routerLink="/about">Conocer Axolite</a>
       </div>
-      <div class="feature-card">
-        <i class="feature-icon">🔧</i>
-        <h3>Fácil Instalación</h3>
-        <p>Diseñados para una instalación sencilla y un mantenimiento sin complicaciones.</p>
-      </div>
-      <div class="feature-card">
-        <i class="feature-icon">✨</i>
-        <h3>Agua Cristalina</h3>
-        <p>Disfruta de agua pura y cristalina en todo momento.</p>
-      </div>
-      <div class="feature-card">
-        <i class="feature-icon">🌿</i>
-        <h3>Eco-Friendly</h3>
-        <p>Reducimos el uso de plástico con soluciones sostenibles.</p>
+      <div class="hero-proof"><span class="proof-mark" aria-hidden="true">✦</span><span>Purificadores para tu hogar y negocio</span></div>
+    </div>
+    <div class="hero-art" aria-label="Identidad de Axolite">
+      <div class="art-orbit"></div>
+      <img src="assets/images/logoWhite.png" alt="" class="hero-logo" />
+      <span class="art-caption">Pureza en movimiento</span>
+    </div>
+  </section>
+
+  <section class="intro container" aria-labelledby="intro-title">
+    <div class="section-heading">
+      <p class="section-kicker">La esencia Axolite</p>
+      <h2 id="intro-title">Lo esencial también puede sentirse extraordinario.</h2>
+    </div>
+    <div class="intro-copy"><p>Axolite nace de una idea sencilla: el bienestar empieza con el agua que compartimos. Creamos soluciones de purificación con una mirada clara, cercana y familiar.</p><a class="text-link" routerLink="/about">Descubre nuestra misión <span aria-hidden="true">→</span></a></div>
+  </section>
+
+  <section class="features-section" aria-labelledby="features-title">
+    <div class="container">
+      <div class="section-heading"><p class="section-kicker">Hecho para el día a día</p><h2 id="features-title">Tecnología que se adapta a tu vida.</h2></div>
+      <div class="features-grid">
+        <article class="feature-card"><span class="feature-number">01</span><h3>Filtración avanzada</h3><p>Soluciones pensadas para disfrutar agua pura y cristalina en cada momento.</p></article>
+        <article class="feature-card feature-card-accent"><span class="feature-number">02</span><h3>Sencillez real</h3><p>Instalación y mantenimiento claros, sin complicaciones innecesarias.</p></article>
+        <article class="feature-card"><span class="feature-number">03</span><h3>Más cuidado</h3><p>Una alternativa consciente para reducir el uso de plástico en el hogar.</p></article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-  
-  
+  <section class="home-cta container" aria-labelledby="cta-title"><div><p class="section-kicker">Tu siguiente sorbo</p><h2 id="cta-title">Encuentra la solución para tu espacio.</h2></div><a class="btn btn-primary" routerLink="/store">Ver productos <span aria-hidden="true">→</span></a></section>
+</main>

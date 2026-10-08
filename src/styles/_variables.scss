@@ -1,50 +1,55 @@
-// Brand Colors
-$primary: #007db6;
-$secondary: #04293a;
+// Axolite design tokens. Keep these values aligned with the brand manual.
+$ink: #181d36;
+$navy: #103d63;
+$blue: #286d8c;
+$cyan: #38bce2;
+$lilac: #866fb1;
+$pink: #e41376;
+$paper: #f7fbfd;
 $white: #ffffff;
+$muted: #5c6b78;
+$line: rgba($ink, 0.12);
 
-// Additional semantic colors
-$background: $white;
-$text-primary: $secondary;
+$primary: $blue;
+$secondary: $ink;
+$background: $paper;
+$text-primary: $ink;
 $text-light: $white;
 
-$font-size-md: 1rem;        
+$font-display: 'Poppins', 'Avenir Next', 'Segoe UI', sans-serif;
+$font-body: 'Montserrat', 'Avenir Next', 'Segoe UI', sans-serif;
+
+$space-1: 0.5rem;
+$space-2: 0.75rem;
+$space-3: 1rem;
+$space-4: 1.5rem;
+$space-5: 2rem;
+$space-6: 3rem;
+$space-7: 5rem;
+
+$spacing-xs: $space-1;
+$spacing-sm: $space-2;
+$spacing-md: $space-3;
+$spacing-lg: $space-4;
+$spacing-xl: $space-5;
+
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
 $font-size-lg: 1.125rem;
-$font-size-xxl: 2.2rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 2.5rem;
 
-$spacing-sm: 0.5rem;
-$spacing-md: 0.75rem;
-$spacing-lg: 1.25rem;
-$spacing-xl: 2rem;
+$radius-sm: 0.75rem;
+$radius-md: 1.25rem;
+$radius-lg: 2rem;
+$border-radius: $radius-sm;
+$border-radius-lg: $radius-md;
 
-$border-radius-lg: 12px;
+$shadow-soft: 0 16px 42px rgba($ink, 0.08);
+$shadow-lift: 0 22px 60px rgba($ink, 0.14);
+$transition-base: 180ms ease;
 
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
-
-// Breakpoints
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
-
-// Spacing
-$spacing-xs: 0.25rem;
-$spacing-sm: 0.5rem;
-$spacing-md: 1rem;
-$spacing-lg: 1.5rem;
-$spacing-xl: 2rem;
-
-// Font sizes
-$font-size-sm: 0.875rem;
-$font-size-base: 1rem;
-$font-size-lg: 1.25rem;
-$font-size-xl: 1.5rem;
-$font-size-xxl: 2rem;
-
-// Border radius
-$border-radius: 0.25rem;
-$border-radius-lg: 0.5rem;
-
-// Transitions
-$transition-base: all 0.3s ease-in-out;

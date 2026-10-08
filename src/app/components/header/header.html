@@ -1,22 +1,15 @@
 <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a href="/" class="logo">
-  <img src="assets/images/logo.png" alt="Axolite Logo" class="logo-img" />
-        
-      </a>
+  <div class="container nav-shell">
+    <a routerLink="/" class="logo" aria-label="Axolite, inicio">
+      <img src="assets/images/logo.png" alt="Axolite" class="logo-img" />
+    </a>
+    <nav aria-label="Navegación principal">
       <ul class="nav-list">
-        @for(item of navItems; track item.path) {
-          <li class="nav-item">
-            <a [routerLink]="item.path" 
-               routerLinkActive="active" 
-               [routerLinkActiveOptions]="{ exact: item.path === '/' }"
-               class="nav-link">
-              {{ item.label }}
-            </a>
-          </li>
+        @for (item of navItems; track item.path) {
+          <li><a [routerLink]="item.path" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: item.path === '/' }" class="nav-link">{{ item.label }}</a></li>
         }
       </ul>
     </nav>
+    <a class="nav-cta" routerLink="/store">Ver catálogo <span aria-hidden="true">↗</span></a>
   </div>
 </header>

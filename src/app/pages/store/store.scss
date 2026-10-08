@@ -1,126 +1,29 @@
 @import '../../../styles/variables';
 
-.store-hero {
-  background: linear-gradient(rgba($secondary, 0.9), rgba($secondary, 0.9)),
-              url('/assets/images/store-hero.jpg') center/cover;
-  padding: $spacing-xl 0;
-  color: $white;
-  text-align: center;
-  margin-bottom: $spacing-xl;
-
-  h1 {
-    margin-bottom: $spacing-sm;
-  }
-
-  .subtitle {
-    font-size: $font-size-lg;
-    opacity: 0.9;
-  }
-}
-
-.store-content {
-  padding: $spacing-xl 0;
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: $spacing-xl;
-}
-
-.product-card {
-  background: $white;
-  border-radius: $border-radius-lg;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: $transition-base;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  }
-}
-
-.product-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-
-.product-info {
-  padding: $spacing-lg;
-
-  h3 {
-    color: $secondary;
-    margin-bottom: $spacing-md;
-  }
-
-  .product-description {
-    color: rgba($secondary, 0.8);
-    margin-bottom: $spacing-lg;
-    line-height: 1.6;
-  }
-}
-
-.product-features {
-  margin-bottom: $spacing-lg;
-
-  h4 {
-    color: $secondary;
-    margin-bottom: $spacing-sm;
-    font-size: $font-size-base;
-  }
-
-  ul {
-    list-style: none;
-    padding-left: $spacing-md;
-
-    li {
-      position: relative;
-      margin-bottom: $spacing-xs;
-      color: rgba($secondary, 0.8);
-
-      &:before {
-        content: "•";
-        color: $primary;
-        position: absolute;
-        left: -$spacing-md;
-      }
-    }
-  }
-}
-
-.product-price {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: $spacing-md;
-  border-top: 1px solid rgba($secondary, 0.1);
-
-  span {
-    font-size: $font-size-lg;
-    font-weight: 600;
-    color: $secondary;
-  }
-
-  .btn {
-    padding: $spacing-xs $spacing-md;
-  }
-}
-
-// Responsive design
-@media (max-width: $breakpoint-md) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .product-price {
-    flex-direction: column;
-    gap: $spacing-md;
-    text-align: center;
-
-    .btn {
-      width: 100%;
-    }
-  }
-}
+.store-page { padding-top: 78px; }
+.store-hero { padding: $space-7 0 $space-6; }
+.store-hero h1 { max-width: 820px; }
+.store-hero h1, .store-hero p:last-child { max-width: 760px; }
+.store-hero h1 { color: $ink; }
+.store-hero > p:last-child { color: $muted; font-size: 1.15rem; }
+.catalogue { padding-bottom: $space-6; }
+.catalogue-head { display: flex; align-items: end; justify-content: space-between; gap: $space-5; margin-bottom: $space-5; }
+.catalogue-head h2 { margin: 0; }
+.catalogue-note { max-width: 360px; margin: 0; color: $muted; font-size: 0.9rem; }
+.products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: $space-4; }
+.product-card { overflow: hidden; border: 1px solid $line; border-radius: $radius-md; background: $white; box-shadow: $shadow-soft; transition: transform $transition-base, box-shadow $transition-base; }
+.product-card:hover { transform: translateY(-5px); box-shadow: $shadow-lift; }
+.product-art { position: relative; min-height: 270px; display: grid; place-items: center; overflow: hidden; background: linear-gradient(145deg, rgba($cyan, 0.28), rgba($lilac, 0.25)); }
+.product-water { position: absolute; width: 220px; height: 220px; border: 1px solid rgba($blue, 0.27); border-radius: 50%; box-shadow: 0 0 0 30px rgba($white, 0.24), 0 0 0 60px rgba($white, 0.12); }
+.product-image { position: relative; z-index: 1; max-width: 60%; max-height: 190px; object-fit: contain; filter: drop-shadow(0 16px 24px rgba($ink, 0.2)); }
+.product-info { padding: $space-5; }
+.product-index { margin-bottom: $space-2; color: $blue; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; }
+.product-info h3 { font-size: 1.55rem; }
+.product-description { min-height: 54px; color: $muted; }
+.product-features { display: grid; gap: 0.45rem; margin: $space-4 0; padding: 0; list-style: none; color: $muted; font-size: 0.9rem; }
+.product-features li::before { margin-right: 0.5rem; color: $cyan; content: '•'; font-weight: 800; }
+.product-info .btn { width: 100%; }
+.catalogue-edit { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; margin-top: $space-5; padding: $space-3 $space-4; border: 1px dashed rgba($blue, 0.35); border-radius: $radius-sm; color: $muted; font-size: 0.84rem; }
+.catalogue-edit strong { color: $ink; }
+code { padding: 0.12rem 0.35rem; border-radius: 0.35rem; background: rgba($ink, 0.06); color: $ink; font-size: 0.82em; }
+@media (max-width: $breakpoint-md) { .store-page { padding-top: 70px; } .store-hero { padding: $space-6 0 $space-5; } .catalogue-head { align-items: flex-start; flex-direction: column; gap: $space-3; } .products-grid { grid-template-columns: 1fr; } }

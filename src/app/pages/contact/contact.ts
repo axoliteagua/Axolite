@@ -33,7 +33,7 @@ Email: ${this.contactData.email}
 Teléfono: ${this.contactData.phone}
 Mensaje: ${this.contactData.message}`;
     
-    window.open(`https://wa.me/1234567890?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://wa.me/527208620864?text=${encodeURIComponent(message)}`, '_blank');
     
     // Reset form
     this.contactData = {

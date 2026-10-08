@@ -1,133 +1,24 @@
 @import '../../../styles/variables';
 
-.contact-hero {
-  background: linear-gradient(rgba($secondary, 0.9), rgba($secondary, 0.9)),
-              url('/assets/images/contact-hero.jpg') center/cover;
-  padding: $spacing-xl 0;
-  color: $white;
-  text-align: center;
-  margin-bottom: $spacing-xl;
-
-  h1 {
-    margin-bottom: $spacing-sm;
-  }
-
-  .subtitle {
-    font-size: $font-size-lg;
-    opacity: 0.9;
-  }
-}
-
-.contact-content {
-  padding: $spacing-xl 0;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: $spacing-xl * 2;
-}
-
-.contact-info {
-  h2 {
-    color: $secondary;
-    margin-bottom: $spacing-xl;
-  }
-}
-
-.info-items {
-  display: flex;
-  flex-direction: column;
-  gap: $spacing-lg;
-}
-
-.info-item {
-  display: flex;
-  align-items: flex-start;
-  gap: $spacing-md;
-
-  .icon {
-    font-size: $font-size-xl;
-    color: $primary;
-  }
-
-  .info-text {
-    h3 {
-      color: $secondary;
-      margin-bottom: $spacing-xs;
-    }
-
-    p {
-      color: rgba($secondary, 0.8);
-      margin-bottom: $spacing-xs;
-    }
-  }
-}
-
-.contact-form {
-  background: $white;
-  padding: $spacing-xl;
-  border-radius: $border-radius-lg;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-  h2 {
-    color: $secondary;
-    margin-bottom: $spacing-xl;
-  }
-}
-
-.form-group {
-  margin-bottom: $spacing-md;
-
-  label {
-    display: block;
-    margin-bottom: $spacing-xs;
-    color: $secondary;
-    font-weight: 500;
-  }
-
-  input,
-  textarea {
-    width: 100%;
-    padding: $spacing-sm;
-    border: 1px solid rgba($secondary, 0.2);
-    border-radius: $border-radius;
-    font-size: $font-size-base;
-    transition: $transition-base;
-
-    &:focus {
-      outline: none;
-      border-color: $primary;
-      box-shadow: 0 0 0 2px rgba($primary, 0.1);
-    }
-  }
-
-  textarea {
-    resize: vertical;
-  }
-}
-
-button[type="submit"] {
-  width: 100%;
-  margin-top: $spacing-lg;
-  
-  &:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
-  }
-}
-
-// Responsive design
-@media (max-width: $breakpoint-md) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-info {
-    text-align: center;
-  }
-
-  .info-item {
-    justify-content: center;
-  }
-}
+.contact-page { padding-top: 78px; }
+.contact-hero { padding: $space-7 0 $space-6; }
+.contact-hero h1 { max-width: 760px; }
+.contact-hero > p:last-child { max-width: 570px; color: $muted; font-size: 1.15rem; }
+.contact-content { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: $space-7; align-items: start; padding-bottom: $space-6; }
+.contact-info h2 { max-width: 520px; }
+.contact-lede { max-width: 450px; color: $muted; }
+.contact-list { display: grid; gap: $space-2; margin-top: $space-5; }
+.contact-item { display: flex; align-items: center; gap: $space-3; padding: $space-3 0; border-bottom: 1px solid $line; color: $ink; text-decoration: none; }
+.contact-item:hover strong { color: $blue; }
+.contact-icon { display: grid; width: 42px; height: 42px; flex: 0 0 42px; place-items: center; border-radius: 50%; background: rgba($cyan, 0.16); color: $blue; font-family: $font-display; font-weight: 700; }
+.contact-item strong, .contact-item small { display: block; }
+.contact-item small { margin-top: 0.15rem; color: $muted; }
+.contact-form { display: grid; gap: $space-3; padding: $space-6; border-radius: $radius-lg; background: $white; box-shadow: $shadow-soft; }
+.contact-form h2 { margin-bottom: $space-2; }
+.contact-form label { display: grid; gap: 0.45rem; color: $ink; font-size: 0.88rem; font-weight: 700; }
+.contact-form input, .contact-form textarea { width: 100%; border: 1px solid $line; border-radius: $radius-sm; padding: 0.9rem 1rem; background: $paper; color: $ink; font-size: 1rem; resize: vertical; transition: border-color $transition-base, box-shadow $transition-base; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: $blue; box-shadow: 0 0 0 4px rgba($cyan, 0.16); outline: none; }
+.contact-form button { width: 100%; margin-top: $space-2; }
+.contact-form button:disabled { cursor: not-allowed; opacity: 0.48; transform: none; }
+.form-note { color: $muted; font-size: 0.78rem; text-align: center; }
+@media (max-width: $breakpoint-md) { .contact-page { padding-top: 70px; } .contact-hero { padding: $space-6 0 $space-5; } .contact-content { grid-template-columns: 1fr; gap: $space-5; } .contact-form { padding: $space-5; } }
