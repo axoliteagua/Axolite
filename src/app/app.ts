@@ -11,5 +11,5 @@ import { FooterComponent } from './components/footer/footer';
   styleUrl: './app.scss'
 })
 export class App {
-  protected readonly title = signal('Axolite - Purificadores de Agua');
+  protected readonly title = signal('Axolite - Agua purificada y embotellada');
 }

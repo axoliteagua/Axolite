@@ -10,17 +10,17 @@ export class ProductService {
   private readonly products: Product[] = [
     {
       id: 1,
-      name: 'Purificador Axolite Casa',
-      description: 'Una solución clara y confiable para disfrutar agua pura todos los días.',
-      imageUrl: 'assets/images/products/purificador-casa.jpg',
-      features: ['Filtración de varias etapas', 'Instalación sencilla', 'Mantenimiento práctico']
+      name: 'Agua purificada Axolite',
+      description: 'Agua purificada para disfrutar en casa, en la oficina y en los momentos que compartimos.',
+      imageUrl: 'assets/images/products/agua-purificada.jpg',
+      features: ['Pureza y frescura', 'Presentaciones para cada necesidad', 'Consulta disponibilidad por WhatsApp']
     },
     {
       id: 2,
-      name: 'Purificador Axolite Negocio',
-      description: 'Diseñado para espacios que necesitan una solución constante y de alto rendimiento.',
-      imageUrl: 'assets/images/products/purificador-negocio.jpg',
-      features: ['Mayor capacidad de servicio', 'Asesoría para instalación', 'Atención por WhatsApp']
+      name: 'Agua embotellada Axolite',
+      description: 'Una opción práctica para llevar, compartir y mantenerte hidratado donde estés.',
+      imageUrl: 'assets/images/products/agua-embotellada.jpg',
+      features: ['Lista para disfrutar', 'Ideal para hogar y negocio', 'Consulta presentaciones por WhatsApp']
     }
   ];
 
