@@ -6,7 +6,7 @@
       @for (product of products$ | async; track product.id) {
         <article class="product-card">
           <div class="product-art"><span class="product-water" aria-hidden="true"></span>@if (product.imageUrl) {<img [src]="product.imageUrl" [alt]="product.name" class="product-image" loading="lazy" (error)="hideImage($event)" />}</div>
-          <div class="product-info"><p class="product-index">Producto {{ product.id | number:'2.0-0' }}</p><h3>{{ product.name }}</h3><p class="product-description">{{ product.description }}</p><ul class="product-features">@for (feature of product.features; track feature) {<li>{{ feature }}</li>}</ul><a class="btn btn-whatsapp" [href]="getWhatsAppLink(product)" target="_blank" rel="noopener">Consultar por WhatsApp <span aria-hidden="true">↗</span></a></div>
+          <div class="product-info"><p class="product-index">Producto {{ product.id | number:'2.0-0' }}</p><h3>{{ product.name }}</h3><p class="product-description">{{ product.description }}</p><ul class="product-features">@for (feature of product.features; track feature) {<li>{{ feature }}</li>}</ul><a class="btn btn-whatsapp" [href]="getWhatsAppLink(product)" target="_blank" rel="noopener">Consultar por WhatsApp <svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" /></svg></a></div>
         </article>
       }
     </div>

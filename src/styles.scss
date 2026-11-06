@@ -5,6 +5,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: $background; color: $text-primary; font-family: $font-body; font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
 body, button, input, textarea { font-family: $font-body; }
 a { color: inherit; }
+svg.icon { width: 1.05em; height: 1.05em; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
 button, a { -webkit-tap-highlight-color: transparent; }
 :focus-visible { outline: 3px solid $pink; outline-offset: 4px; }
 h1, h2, h3, h4 { margin: 0 0 $space-3; font-family: $font-display; line-height: 1.12; }

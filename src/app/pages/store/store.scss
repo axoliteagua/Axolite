@@ -22,6 +22,7 @@
 .product-info h3 { font-size: 1.55rem; }
 .product-description { min-height: 54px; color: $muted; }
 .product-features { display: grid; gap: 0.45rem; margin: $space-4 0; padding: 0; list-style: none; color: $muted; font-size: 0.9rem; }
-.product-features li::before { margin-right: 0.5rem; color: $cyan; content: '•'; font-weight: 800; }
+.product-features li { display: flex; align-items: baseline; gap: 0.5rem; }
+.product-features li::before { width: 0.42rem; height: 0.42rem; flex: 0 0 0.42rem; border-radius: 50%; background: $cyan; content: ''; transform: translateY(-0.08em); }
 .product-info .btn { width: 100%; }
 @media (max-width: $breakpoint-md) { .store-page { padding-top: 70px; } .store-hero { padding: $space-6 0 $space-5; } .catalogue-head { align-items: flex-start; flex-direction: column; gap: $space-3; } .products-grid { grid-template-columns: 1fr; } }
