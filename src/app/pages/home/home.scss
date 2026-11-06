@@ -1,7 +1,7 @@
 @import '../../../styles/variables';
 
-.hero { min-height: min(700px, calc(100vh - 78px)); display: grid; grid-template-columns: 1.05fr 0.95fr; align-items: center; gap: $space-6; padding-top: 8rem; padding-bottom: 5rem; }
-.hero-copy { position: relative; z-index: 1; }
+.hero { min-height: min(700px, calc(100vh - 78px)); display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr); align-items: stretch; gap: clamp($space-5, 6vw, $space-7); padding-top: 8rem; padding-bottom: 5rem; }
+.hero-copy { position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: center; padding-block: $space-5; }
 .hero h1 { max-width: 680px; color: $ink; }
 .hero h1 span { color: $blue; }
 .hero-lede { max-width: 550px; color: $muted; font-size: clamp(1.05rem, 2vw, 1.3rem); }
@@ -21,11 +21,11 @@
 .features-section { padding: $space-7 0; background: $white; }
 .features-section .section-heading { margin-bottom: $space-6; }
 .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: $space-3; }
-.feature-card { min-height: 255px; display: flex; flex-direction: column; justify-content: flex-end; border: 1px solid $line; border-radius: $radius-md; padding: $space-5; background: $paper; transition: transform $transition-base, box-shadow $transition-base; }
+.feature-card { min-height: 255px; display: flex; flex-direction: column; justify-content: flex-end; border: 1px solid $line; border-radius: $radius-md; padding: $space-5; background: $paper; text-align: center; transition: transform $transition-base, box-shadow $transition-base; }
 .feature-card:hover { transform: translateY(-5px); box-shadow: $shadow-soft; }
 .feature-card-accent { background: $ink; color: $white; }
 .feature-card-accent p { color: rgba($white, 0.72); }
-.feature-number { margin-bottom: auto; color: $cyan; font-family: $font-display; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.1em; }
+.feature-number { align-self: center; margin-bottom: auto; color: $cyan; font-family: $font-display; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.1em; }
 .feature-card h3 { margin-bottom: $space-2; }
 .feature-card p { margin: 0; color: $muted; }
 .home-cta { display: flex; align-items: center; justify-content: space-between; gap: $space-4; margin-top: $space-7; padding: $space-6; border-radius: $radius-lg; background: linear-gradient(110deg, rgba($cyan, 0.18), rgba($lilac, 0.17)); }

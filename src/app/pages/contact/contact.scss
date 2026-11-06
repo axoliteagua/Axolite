@@ -6,7 +6,7 @@
 .contact-hero h1 { max-width: 760px; }
 .contact-hero .section-kicker { color: $cyan; }
 .contact-hero > .contact-hero-copy > p:last-child { max-width: 570px; color: rgba($white, 0.8); font-size: 1.15rem; }
-.contact-content { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: $space-7; align-items: start; padding-bottom: $space-6; }
+.contact-content { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: $space-7; align-items: start; margin-top: $space-6; padding-bottom: $space-6; }
 .contact-info h2 { max-width: 520px; }
 .contact-lede { max-width: 450px; color: $muted; }
 .contact-list { display: grid; gap: $space-2; margin-top: $space-5; }
