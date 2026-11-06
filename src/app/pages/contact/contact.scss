@@ -1,9 +1,11 @@
 @import '../../../styles/variables';
 
 .contact-page { padding-top: 78px; }
-.contact-hero { padding: $space-7 0 $space-6; }
+.contact-hero { min-height: 330px; display: flex; align-items: end; padding: $space-7; border-radius: $radius-lg; background: linear-gradient(90deg, rgba($ink, 0.88), rgba($ink, 0.18)), url('/assets/images/editorial/product-water.png') center / cover; color: $white; }
+.contact-hero-copy { max-width: 650px; }
 .contact-hero h1 { max-width: 760px; }
-.contact-hero > p:last-child { max-width: 570px; color: $muted; font-size: 1.15rem; }
+.contact-hero .section-kicker { color: $cyan; }
+.contact-hero > .contact-hero-copy > p:last-child { max-width: 570px; color: rgba($white, 0.8); font-size: 1.15rem; }
 .contact-content { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: $space-7; align-items: start; padding-bottom: $space-6; }
 .contact-info h2 { max-width: 520px; }
 .contact-lede { max-width: 450px; color: $muted; }
@@ -21,4 +23,4 @@
 .contact-form button { width: 100%; margin-top: $space-2; }
 .contact-form button:disabled { cursor: not-allowed; opacity: 0.48; transform: none; }
 .form-note { color: $muted; font-size: 0.78rem; text-align: center; }
-@media (max-width: $breakpoint-md) { .contact-page { padding-top: 70px; } .contact-hero { padding: $space-6 0 $space-5; } .contact-content { grid-template-columns: 1fr; gap: $space-5; } .contact-form { padding: $space-5; } }
+@media (max-width: $breakpoint-md) { .contact-page { padding-top: 70px; } .contact-hero { min-height: 290px; padding: $space-5; } .contact-content { grid-template-columns: 1fr; gap: $space-5; } .contact-form { padding: $space-5; } }

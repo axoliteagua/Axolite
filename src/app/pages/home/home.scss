@@ -8,13 +8,12 @@
 .hero-actions { display: flex; flex-wrap: wrap; gap: $space-2; margin: $space-5 0; }
 .hero-proof { display: flex; align-items: center; gap: $space-2; color: $muted; font-size: 0.85rem; }
 .proof-mark { display: grid; width: 28px; height: 28px; place-items: center; border-radius: 50%; background: rgba($cyan, 0.18); color: $blue; }
-.hero-art { position: relative; min-height: 450px; display: grid; place-items: center; overflow: hidden; border-radius: 48% 52% 42% 58% / 42% 45% 55% 58%; background: radial-gradient(circle at 25% 20%, rgba($cyan, 0.85), transparent 32%), linear-gradient(145deg, $blue, $ink 76%); box-shadow: $shadow-lift; }
+.hero-art { position: relative; min-height: 450px; display: grid; place-items: center; overflow: hidden; border-radius: 48% 52% 42% 58% / 42% 45% 55% 58%; background: linear-gradient(145deg, rgba($ink, 0.66), rgba($blue, 0.22)), url('/assets/images/editorial/hero-water.png') center / cover; box-shadow: $shadow-lift; }
 .hero-art::before, .hero-art::after { position: absolute; border: 1px solid rgba($white, 0.3); border-radius: 50%; content: ''; }
 .hero-art::before { width: 420px; height: 420px; }
 .hero-art::after { width: 290px; height: 290px; }
 .art-orbit { position: absolute; width: 560px; height: 560px; border: 1px dashed rgba($white, 0.24); border-radius: 50%; transform: rotate(-22deg); }
 .hero-logo { position: relative; z-index: 1; width: min(72%, 380px); filter: drop-shadow(0 18px 20px rgba($ink, 0.35)); }
-.art-caption { position: absolute; right: 2rem; bottom: 2rem; color: rgba($white, 0.72); font-size: 0.76rem; letter-spacing: 0.13em; text-transform: uppercase; }
 .intro { display: grid; grid-template-columns: 1fr 0.8fr; gap: $space-7; align-items: end; padding: $space-7 0; }
 .intro-copy { max-width: 480px; color: $muted; font-size: 1.05rem; }
 .text-link { color: $blue; font-weight: 700; text-decoration: none; }

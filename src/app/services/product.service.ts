@@ -12,14 +12,14 @@ export class ProductService {
       id: 1,
       name: 'Agua purificada Axolite',
       description: 'Agua purificada para disfrutar en casa, en la oficina y en los momentos que compartimos.',
-      imageUrl: 'assets/images/products/agua-purificada.jpg',
+      imageUrl: 'assets/images/editorial/product-water.png',
       features: ['Pureza y frescura', 'Presentaciones para cada necesidad', 'Consulta disponibilidad por WhatsApp']
     },
     {
       id: 2,
       name: 'Agua embotellada Axolite',
       description: 'Una opción práctica para llevar, compartir y mantenerte hidratado donde estés.',
-      imageUrl: 'assets/images/products/agua-embotellada.jpg',
+      imageUrl: 'assets/images/editorial/hero-water.png',
       features: ['Lista para disfrutar', 'Ideal para hogar y negocio', 'Consulta presentaciones por WhatsApp']
     }
   ];
